@@ -2,4 +2,5 @@
 
 Allows for text count and reading times with other useful functions
 
-*Made with React and Bootstrap*
+> [!NOTE]
+> *Made with React and Bootstrap*
