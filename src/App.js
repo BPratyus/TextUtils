@@ -6,11 +6,15 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState('light') ;
   const [alert, setAlert] = useState(null) ;
-  const [darkMode, setdarkMode] = useState('default') ;
 
   const showAlert = (message,type)=>{
     setAlert({
@@ -37,20 +41,26 @@ function App() {
     }
   }
 
-  const ModeType =(bg,fg,txt)=>{
-    if (darkMode==='default') {
-      
-    }
-  }
   return (
     // JSX Fragment for returning only one component, compiled by babel to JS
     <>
+    {/* <Router> */}
       <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
       <div className="container my-3">
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-        {/* <About/> */}
+      <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+       {/* <Routes>
+          <Route exact path="/about" element={<About />}/>
+            
+         
+          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />}/>
+          
+             
+          
+        </Routes> */}
+       
       </div>
+      {/* </Router> */}
     </>
 
     
