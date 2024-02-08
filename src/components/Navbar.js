@@ -21,21 +21,6 @@ export default function Navbar(props) { //props are read-only and can be any obj
             <Link className="nav-link" to="/about">About</Link>
           </li>
         </ul>
-        {/* <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-primary" type="submit">Search</button>
-        </form> */}
-        {/* <div className={`dropdown ${props.mode==='light'?'invisible':'visible'}`}>
-          <button className="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dark Mode Theme
-          </button>
-          <ul className="dropdown-menu">
-            <li><button className="dropdown-item active" >Default</button></li>
-            <li><button className="dropdown-item" >Red</button></li>
-            <li><button className="dropdown-item" >Cyan</button></li>
-            <li><button className="dropdown-item" >Teal</button></li>
-          </ul>
-        </div> */}
         <div className={`form-check form-switch mx-4 text-${props.mode==='light'?'dark':'light'}`}>
           <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>

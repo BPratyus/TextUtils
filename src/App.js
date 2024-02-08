@@ -31,13 +31,13 @@ function App() {
       setmode('dark');
       document.body.style.backgroundColor = '#1e1f24'
       showAlert("Dark mode has been Enabled","success")
-      document.title ="TextUtils-Dark Mode"
+      // document.title ="TextUtils-Dark Mode"
     }
     else{
       setmode('light');
       document.body.style.backgroundColor = 'white'
       showAlert("Dark mode has been Disabled","warning")
-      document.title ="TextUtils-Light Mode"
+      // document.title ="TextUtils-Light Mode"
     }
   }
 
@@ -54,7 +54,7 @@ function App() {
           
             
          
-          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />}/>
+          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils- Word counter, Charachter Counter, Read Time and more" mode={mode} />}/>
           
              
           
