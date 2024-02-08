@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Navbar(props) { //props are read-only and can be any objects
   return (
     <div >
-    <nav className="navbar navbar-expand-lg navbar bg-body" data-bs-theme={props.mode} >
-    {/* data-bs-theme={props.mode} */}
+    <nav className="navbar navbar-expand-lg navbar bg-body-tertiary" data-bs-theme={props.mode} >
     <div className="container-fluid"  >
       <Link className="navbar-brand" to="/">{props.title}</Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
