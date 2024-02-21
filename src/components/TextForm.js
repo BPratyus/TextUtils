@@ -29,10 +29,8 @@ export default function TextForm(props) {
 
     const handleCopy = ()=>{
         // console.log("Uppercase was Cliacked")
-        var text = document.getElementById("myBox");
-        text.select();
-        navigator.clipboard.writeText(text.value);
-        document.getSelection().removeAllRanges();
+        
+        navigator.clipboard.writeText(text);
         props.showAlert("Copied!","success");
         
     }
@@ -60,8 +58,9 @@ export default function TextForm(props) {
     </div>
     <div className="container my-5" style={{color:props.mode==='dark'?'white':'black'}}>
     <h1>Your text Summary</h1>
-    <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} and {text.length} characters</p>
-    <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes to read</p>
+    <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} and {text.length} characters</p>
+    {/*s+ White space any inc. new lines */}
+    <p>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} minutes to read</p>
     <h2>Preview</h2>
     <p>{text.length>0?text:"Nothing to preview!"}</p>
     </div>
