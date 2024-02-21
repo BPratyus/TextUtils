@@ -20,15 +20,8 @@ export default function Navbar(props) { //props are read-only and can be any obj
             <Link className="nav-link" to="/about">About</Link>
           </li>
         </ul>
-        <div className="d-flex">
-          <button className="btn bg-primary rounded mx-2" onClick={()=>props.toggleMode('primary')} style={{height:'30px', width:'30px', cursor:'pointer'}}></button>
-          <button className="btn bg-danger rounded mx-2" onClick={()=>props.toggleMode('danger')} style={{height:'30px', width:'30px', cursor:'pointer'}}></button>
-          <button className="btn bg-success rounded mx-2" onClick={()=>props.toggleMode('success')} style={{height:'30px', width:'30px', cursor:'pointer'}}></button>
-          <button className="btn bg-warning rounded mx-2" onClick={()=>props.toggleMode('warning')} style={{height:'30px', width:'30px', cursor:'pointer'}}></button>
-          {/* On Click needs function not fn call */}
-        </div>
         <div className={`form-check form-switch mx-4 text-${props.mode==='light'?'dark':'light'}`}>
-          <input className="form-check-input" onClick={()=>{props.toggleMode(null)}} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+          <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
         </div>
       </div>
